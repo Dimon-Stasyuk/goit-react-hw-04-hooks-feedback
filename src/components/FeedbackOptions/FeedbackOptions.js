@@ -1,19 +1,19 @@
-import React from 'react';
-import './FeedbackOptions.css';
+import React from "react";
+import "./FeedbackOptions.css";
 
-const shortid = require('shortid');
+const shortid = require("shortid");
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <>
-      {options.map(option => {
+      {options.map((option) => {
         return (
           <button
-            className="btn"
-            type="button"
+            name={option}
+            className='btn'
+            type='button'
             onClick={onLeaveFeedback}
-            key={shortid.generate()}
-          >
+            key={shortid.generate()}>
             {option}
           </button>
         );
